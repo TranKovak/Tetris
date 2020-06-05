@@ -19,3 +19,6 @@ func _on_Button_pressed():
 	$Fade.show()
 	$Fade.fade_in()
 	
+
+func _on_Exit_Button_pressed():
+	get_tree().quit()
