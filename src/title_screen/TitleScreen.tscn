@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://title_screen/buttons/HostGameButton.tscn" type="PackedScene" id=1]
 [ext_resource path="res://assets/The_Tetris_Company_logo_2019.png" type="Texture" id=2]
@@ -14,6 +14,7 @@
 [ext_resource path="res://assets/background_animated/background-frame5.png" type="Texture" id=12]
 [ext_resource path="res://assets/background_animated/background-frame7.png" type="Texture" id=13]
 [ext_resource path="res://assets/background_animated/background-frame6.png" type="Texture" id=14]
+[ext_resource path="res://assets/main_theme_.ogg" type="AudioStream" id=15]
 
 [sub_resource type="Animation" id=1]
 resource_name = "background_animation"
@@ -142,5 +143,9 @@ valign = 2
 
 [node name="Fade" parent="." instance=ExtResource( 6 )]
 visible = false
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 15 )
+autoplay = true
 [connection signal="fade_in_finished" from="Fade" to="." method="_on_Fade_fade_in_finished"]
 [connection signal="fade_out_finished" from="Fade" to="." method="_on_Fade_fade_out_finished"]

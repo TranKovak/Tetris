@@ -7,6 +7,7 @@ var scene_path_to_load
 func _ready():
 	$Menu/CenterRow/Buttons/NewGameButton.grab_focus()
 	$TextureRect/AnimationPlayer.play("background_animation")
+
 	$Fade.show()
 	$Fade.fade_out()
 	for button in $Menu/CenterRow/Buttons.get_children():
